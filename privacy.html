@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy policy — KeepOne</title>
+  <meta name="description" content="KeepOne’s privacy policy. Photos and videos are processed only on your device and never uploaded. Purchases are handled by Google Play.">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <img src="icon-192.png" width="40" height="40" alt="">
+        <span><span class="brand-name">KeepOne</span><span class="brand-tag">Camera-roll cleaner</span></span>
+      </a>
+      <nav aria-label="Site">
+        <a href="index.html">App</a>
+        <a href="privacy.html" aria-current="page">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="support.html">Support</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <article class="wrap">
+      <h1 class="page-title">Privacy policy</h1>
+      <p class="meta">Effective date: November 23, 2026 · Android app (Google Play), package <code>app.keepone.android</code></p>
+
+      <div class="note">
+        <p>The short version: KeepOne reads photos and videos only on your phone, to help you find items you may want to remove. Those files never leave the device. KeepOne has no server, no KeepOne account, no ads, and no analytics or crash-reporting SDKs. Purchases are handled by Google Play.</p>
+      </div>
+
+      <nav class="toc" aria-label="On this page">
+        <p>On this page</p>
+        <ol>
+          <li><a href="#who">Who this covers</a></li>
+          <li><a href="#photos">Photos and videos</a></li>
+          <li><a href="#on-device">What stays on the device</a></li>
+          <li><a href="#not-collected">What we do not collect</a></li>
+          <li><a href="#billing">Purchases and network use</a></li>
+          <li><a href="#sharing">Selling and sharing</a></li>
+          <li><a href="#children">Children</a></li>
+          <li><a href="#retention">Retention and deletion</a></li>
+          <li><a href="#this-site">This website</a></li>
+          <li><a href="#changes">Changes</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ol>
+      </nav>
+
+      <h2 id="who">Who this covers</h2>
+      <p>This policy describes how the KeepOne Android app (“KeepOne,” “we,” “us”) handles information. KeepOne is provided by the independent developer of the app. There is no KeepOne company account system and no KeepOne backend.</p>
+
+      <h2 id="photos">Photos and videos</h2>
+      <p>KeepOne’s core purpose is to help you find and remove similar photos, bursts, screenshots, and large videos in your library. To do that, the app asks Android for permission to read photos and videos:</p>
+      <ul>
+        <li><code>READ_MEDIA_IMAGES</code> and <code>READ_MEDIA_VIDEO</code> (or <code>READ_EXTERNAL_STORAGE</code> on Android 11 and 12)</li>
+        <li><code>READ_MEDIA_VISUAL_USER_SELECTED</code>, so you can grant access to only selected items on Android 14 and later</li>
+      </ul>
+      <p>If you grant only selected access, KeepOne can work only with the items you chose. You can change access later in Android Settings.</p>
+      <p>The app reads library metadata (such as date, size, dimensions, folder, and favorite status) and decodes thumbnails on the device. It groups near-duplicates and bursts, lists screenshots, and flags videos of 50&nbsp;MB or larger. To suggest a keeper in a group, it may use an on-device sharpness measure and Android’s built-in <code>FaceDetector</code> to produce a simple face-confidence score. That detector runs entirely on your phone. It is not used to identify anyone, build a face gallery, or send biometric information anywhere. There is no model download and no use of Google Play Services for this.</p>
+      <p><strong>Photos and videos never leave the device.</strong> KeepOne does not upload, back up, or transmit your library, thumbnails, hashes, or face-confidence scores. Trashing and permanent deletion go through Android’s own system confirmation dialogs (<code>MediaStore.createTrashRequest</code> and, if you choose Delete now, <code>MediaStore.createDeleteRequest</code>).</p>
+
+      <h2 id="on-device">What stays on the device</h2>
+      <p>KeepOne stores a small amount of app state locally with Android DataStore, including:</p>
+      <ul>
+        <li>how many free-tier items you have moved to the trash this calendar month</li>
+        <li>running totals of items and bytes you have moved to the trash with KeepOne</li>
+        <li>identifiers of items this install moved to the trash, so Recently trashed can list them</li>
+        <li>whether you have finished onboarding</li>
+        <li>a cached record of your KeepOne purchase state (free, yearly, or lifetime), so Pro still works when you are offline</li>
+      </ul>
+      <p>If you share a “moved to trash” card, KeepOne draws that image on the phone and hands it to Android’s share sheet. The card is not uploaded by KeepOne. Where you send it next is up to you and the app you pick.</p>
+      <p>This local app data is excluded from Android cloud backup and from device-to-device transfers. Uninstalling KeepOne removes it.</p>
+
+      <h2 id="not-collected">What we do not collect</h2>
+      <p>KeepOne does not create a KeepOne account and does not operate a server. The app includes no advertising SDK, no analytics SDK, and no crash-reporting SDK. The developer does not receive your photos, your contacts, a usage profile, or payment card details.</p>
+      <p>Under Google Play’s Data safety definitions, “collection” means transmitting data off the device. KeepOne does not collect photos, videos, or the on-device app state described above.</p>
+
+      <h2 id="billing">Purchases and network use</h2>
+      <p>If you buy KeepOne Pro, payment is processed by Google Play’s billing system, under Google’s terms and privacy policy. KeepOne never sees your payment card or Play password. The app asks Play whether a yearly or lifetime purchase is active, and it stores that entitlement locally. A cached yearly plan is trusted offline for up to seven days after Play last confirmed it; a lifetime unlock is trusted indefinitely until Play says otherwise.</p>
+      <p>KeepOne’s own manifest does not declare internet permission. Google Play Billing, which the app uses for purchases and to restore them, adds network permissions so it can talk to Google. The Billing Library may also send technical diagnostics to Google as part of operating Play Billing. That traffic goes to Google, not to a KeepOne server, and the developer cannot see your payment details. You can review Google’s policies for Play and Play Billing for how Google handles that information.</p>
+      <p>Opening Privacy, Terms, Support, or “Manage subscription in Google Play” uses Android to open those pages in your browser or the Play Store. Your visit to this website is described below.</p>
+
+      <h2 id="sharing">Selling and sharing</h2>
+      <p>We do not sell your information. We do not share your photos, videos, or local app state with third parties. The only commercial transaction in the app is a purchase you choose to make through Google Play.</p>
+
+      <h2 id="children">Children</h2>
+      <p>KeepOne is a general-audience utility. It is not directed at children under 13 (or the equivalent age in your country), and we do not knowingly collect personal information from children. Because the app does not collect personal information or create accounts, a child who uses the phone would not be sending data to us. If you believe a child has contacted us by email, write to the address below and we will delete that message.</p>
+
+      <h2 id="retention">Retention and deletion</h2>
+      <p>Because we do not collect your library or app state on a server, there is no KeepOne account to delete and no cloud copy for us to erase. To remove KeepOne’s local data, uninstall the app.</p>
+      <p>Items you moved to the system trash remain in Android’s trash for about 30 days (or until you empty it or use Delete now), even if you uninstall KeepOne. Restoring or permanently deleting those items is handled by Android, your gallery, or Files. See <a href="support.html">Support</a> for steps.</p>
+
+      <h2 id="this-site">This website</h2>
+      <p>These pages are static files. They do not use cookies, analytics, or advertising. Fonts are hosted with the site, so your browser does not need to request them from a third-party font service. The host that serves the pages will typically keep ordinary web-server logs (such as IP address and the page requested), under that host’s own policy. We do not run a tracking script on top of that.</p>
+
+      <h2 id="changes">Changes</h2>
+      <p>If this policy changes, we will update the effective date at the top of this page. For a material change, we will also note it in the app or the Play Store listing when we can.</p>
+
+      <h2 id="contact">Contact</h2>
+      <p>For privacy questions, email <a href="mailto:dev.rogueapps@gmail.com">dev.rogueapps@gmail.com</a>.</p>
+      <p class="meta">Effective date: November 23, 2026</p>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>© 2026 KeepOne</p>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="support.html">Support</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

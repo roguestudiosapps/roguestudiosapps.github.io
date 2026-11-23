@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Support — KeepOne</title>
+  <meta name="description" content="KeepOne help: how the system trash and restore work, how to cancel a subscription or request a Google Play refund, and how to contact support.">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <img src="icon-192.png" width="40" height="40" alt="">
+        <span><span class="brand-name">KeepOne</span><span class="brand-tag">Camera-roll cleaner</span></span>
+      </a>
+      <nav aria-label="Site">
+        <a href="index.html">App</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="support.html" aria-current="page">Support</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <article class="wrap">
+      <h1 class="page-title">Support</h1>
+      <p class="lede">Help for KeepOne on Android. If the FAQ does not cover it, email <a href="mailto:dev.rogueapps@gmail.com">dev.rogueapps@gmail.com</a>.</p>
+
+      <h2>Contact</h2>
+      <p>Email <a href="mailto:dev.rogueapps@gmail.com">dev.rogueapps@gmail.com</a>. Please include your Android version and, if the question is about a purchase, whether you bought the yearly plan or the lifetime unlock. Do not send payment card numbers. We cannot see those, and Google Play already has your order.</p>
+
+      <h2>Frequently asked questions</h2>
+
+      <details open>
+        <summary>Where do items go when I trash them?</summary>
+        <p>KeepOne asks Android to move them to the <strong>system trash</strong> with <code>MediaStore.createTrashRequest</code>. Your phone shows a confirmation first. If you cancel that prompt, nothing moves. Items stay in the trash for about 30 days.</p>
+      </details>
+
+      <details>
+        <summary>How do I restore something I trashed?</summary>
+        <p>Within about 30 days, restore it from:</p>
+        <ul>
+          <li>your gallery app’s trash or Recycle bin, or</li>
+          <li>the Files app, or</li>
+          <li><strong>Recently trashed</strong> in KeepOne, which uses Android’s restore request (<code>createTrashRequest</code> with trash turned off). Android will ask you to confirm.</li>
+        </ul>
+        <p>Recently trashed only lists items <em>this install</em> of KeepOne moved to the trash, and only while they are still there. Items you trashed in another app, or in a previous install, will not appear here, but they may still be in the system trash.</p>
+      </details>
+
+      <details>
+        <summary>When do I get the storage back?</summary>
+        <p>Not immediately. Space is freed when the system trash is emptied, or when the items expire after about 30 days. KeepOne reports what will be freed, not what has already been released. To free space sooner, empty the trash in your gallery or Files, or use <strong>Delete now</strong> in Recently trashed.</p>
+      </details>
+
+      <details>
+        <summary>What does Delete now do?</summary>
+        <p>It permanently deletes the items you selected, through Android’s <code>createDeleteRequest</code> confirmation. That cannot be undone. Use it only when you are sure.</p>
+      </details>
+
+      <details>
+        <summary>Does KeepOne upload my photos?</summary>
+        <p>No. Scanning and scoring happen on the device. There is no KeepOne server and no KeepOne account. See the <a href="privacy.html">privacy policy</a>.</p>
+      </details>
+
+      <details>
+        <summary>What’s free, and what does Pro cost?</summary>
+        <p>Scanning and reviewing are always free. You can move up to 1,000 items to the trash each calendar month. The count resets on the 1st, in your phone’s time zone. Pro only removes that cap.</p>
+        <p>US list prices are <strong>$7.99 a year</strong> or <strong>$19.99 lifetime</strong>. Google Play shows your local price at checkout. There is no weekly plan and no trial that turns into a charge. Lifetime is a one-time purchase and never renews.</p>
+      </details>
+
+      <details>
+        <summary>How do I cancel the yearly subscription?</summary>
+        <p>Cancel in Google Play, not inside KeepOne’s paywall.</p>
+        <ol>
+          <li>Open the Play Store app.</li>
+          <li>Tap your profile picture, then <strong>Payments &amp; subscriptions</strong> → <strong>Subscriptions</strong>.</li>
+          <li>Choose KeepOne, then cancel.</li>
+        </ol>
+        <p>If you are already on the yearly plan, KeepOne → Settings also has <strong>Manage subscription in Google Play</strong>. You can use <a href="https://play.google.com/store/account/subscriptions">Google Play subscriptions</a> in a browser too.</p>
+        <p>Cancel at least 24 hours before the period ends to avoid the next charge. You keep Pro until the period you already paid for ends. Canceling does not by itself refund that period.</p>
+      </details>
+
+      <details>
+        <summary>How do I request a refund?</summary>
+        <p>Refunds are handled by Google Play. Open <a href="https://support.google.com/googleplay/answer/2479637">Google’s instructions for Play purchases</a>, or go to your Google account’s Play purchase history and request a refund there. We cannot issue a card refund ourselves because payments never pass through a KeepOne checkout.</p>
+      </details>
+
+      <details>
+        <summary>I already paid, but the app still looks free</summary>
+        <p>In KeepOne, open Settings or the Pro screen and tap <strong>Restore purchases</strong>. Use the same Google account you paid with, and a copy of the app installed from the Play Store. Sideloaded APKs often cannot reach Play Billing. If a purchase is waiting for approval, KeepOne unlocks when Play confirms it.</p>
+      </details>
+
+      <details>
+        <summary>The scan finds little, or I see “selected photos only”</summary>
+        <p>Android may have granted access to only some items. In KeepOne, go to Settings → Photo access → <strong>Change access</strong>, or use Android’s app settings, and allow the full library if you want KeepOne to scan everything. Then scan again.</p>
+      </details>
+
+      <details>
+        <summary>Will this speed up my phone?</summary>
+        <p>KeepOne does not claim to make the phone faster. It helps you free storage after trashed items are emptied or expire.</p>
+      </details>
+
+      <details>
+        <summary>Does KeepOne back up my photos?</summary>
+        <p>No. It only looks at what is already on the phone. If you want a backup, use one you already trust before you trash anything.</p>
+      </details>
+
+      <p>More detail on plans and deletion is in the <a href="terms.html">terms of use</a>.</p>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>© 2026 KeepOne</p>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="support.html">Support</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
